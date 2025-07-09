@@ -1,0 +1,59 @@
+2025-07-08 16:02:14,179 INFO ipython === bench console session ===
+2025-07-08 16:02:14,179 INFO ipython === session end ===
+2025-07-08 16:12:49,373 INFO ipython === bench console session ===
+2025-07-08 16:12:49,373 INFO ipython import frappe
+
+settings = frappe.get_single("System Settings")
+settings.enable_scheduler = 1
+settings.save()
+frappe.db.commit()
+2025-07-08 16:12:49,373 INFO ipython import frappe
+
+settings = frappe.get_single("System Settings")
+settings.enable_scheduler = 1
+settings.save()
+frappe.db.commit()
+2025-07-08 16:12:49,373 INFO ipython clear
+2025-07-08 16:12:49,373 INFO ipython === session end ===
+2025-07-08 16:13:59,106 INFO ipython === bench console session ===
+2025-07-08 16:13:59,106 INFO ipython import frappe
+
+settings = frappe.get_single("System Settings")
+settings.enable_scheduler = 1
+settings.save()
+frappe.db.commit()
+2025-07-08 16:13:59,106 INFO ipython import frappe
+
+settings = frappe.get_single("System Settings")
+
+# Check existing values for mandatory fields
+print("Language:", settings.language)
+print("Time Zone:", settings.time_zone)
+
+# If they are None or empty, assign sensible defaults
+if not settings.language:
+    settings.language = "en"
+if not settings.time_zone:
+    settings.time_zone = "UTC"
+
+# Now enable scheduler
+settings.enable_scheduler = 1
+
+# Save and commit
+settings.save()
+frappe.db.commit()
+2025-07-08 16:13:59,106 INFO ipython import frappe
+
+settings = frappe.get_single("System Settings")
+
+# Set mandatory fields
+settings.language = "en"        # or your preferred language code
+settings.time_zone = "UTC"      # or your local timezone, e.g. "Asia/Kathmandu"
+
+# Now enable scheduler
+settings.enable_scheduler = 1
+
+# Save and commit
+settings.save()
+frappe.db.commit()
+2025-07-08 16:13:59,106 INFO ipython === session end ===

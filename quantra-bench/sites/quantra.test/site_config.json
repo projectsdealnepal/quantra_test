@@ -1,0 +1,7 @@
+{
+ "db_name": "quantra_db",
+ "db_password": "pBlUfyoVFhFoJScT",
+ "db_type": "mariadb",
+ "developer_mode": 1,
+ "enable_scheduler": 1
+}
